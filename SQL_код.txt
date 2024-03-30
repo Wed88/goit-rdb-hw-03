@@ -1,0 +1,27 @@
+Пункт 1
+1.1
+SELECT *
+FROM `mydb`.`products`;
+1.2
+SELECT name, phone
+FROM mydb.shippers;
+
+Пункт 2
+SELECT avg(price) as average_price, max(price) as max_price, min(price) as min_price
+FROM mydb.products;
+
+Пункт 3
+SELECT distinct category_id, price
+FROM mydb.products
+order by price desc
+limit 10;
+
+Пункт 4
+SELECT count(*) as product_count
+FROM mydb.products
+where price > 20 and price < 100;
+
+Пункт 5
+SELECT supplier_id, count(*) as product_count, avg(price) as average_price
+FROM mydb.products
+group by supplier_id;
